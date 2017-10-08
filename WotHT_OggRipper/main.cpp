@@ -7,12 +7,6 @@
 #include <string>
 #include <regex>
 
-void writeBytes(std::string filename, const std::vector<char> &bytes)
-{
-	std::ofstream output(filename, std::ios::binary);
-	std::copy(bytes.begin(), bytes.end(), std::ostreambuf_iterator<char>(output));
-}
-
 int main(int argc, char* argv[])
 {
 	if (argc < 2) { std::cout << "Needs a file as an argument.\n"; return 0; }
